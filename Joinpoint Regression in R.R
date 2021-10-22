@@ -214,7 +214,19 @@ heart.calc
               heart.calc[[2]]
               heart.calc[[3]]
 
-              
+
+# Let's make tables of all the joinpoint estimates               
+death.cause <- c("accidents", "cancer", "heart disease", "P&I", "stroke", "TB")
+one.joinpoint <- data.frame(accidents.calc[[1]], cancer.calc[[1]], heart.calc[[1]], pi.calc[[1]], stroke.calc[[1]], tb.calc[[1]])
+colnames(one.joinpoint) <- death.cause
+two.joinpoints <- data.frame(accidents.calc[[2]], cancer.calc[[2]], heart.calc[[2]], pi.calc[[2]], stroke.calc[[2]], tb.calc[[2]])
+colnames(two.joinpoints) <- death.cause
+three.joinpoints <- data.frame(accidents.calc[[3]], cancer.calc[[3]], heart.calc[[3]], pi.calc[[3]], stroke.calc[[3]], tb.calc[[3]])
+colnames(three.joinpoints) <- death.cause
+
+jp.summary <- list(one.joinpoint, two.joinpoints, three.joinpoints)
+jp.summary
+
 # Time to visualize what we have here
 # Before we do that, it's important to remember that although we INPUT the data as number of deaths and 
     # population size, the model used that information and fit them as though they were rates. So, we'll

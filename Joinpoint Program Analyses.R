@@ -153,12 +153,12 @@ ggplot(modelfits, aes(x = year, y = tb.obs)) +
 
 # Let's make a conglomerate plot to put all the best-fit models together with the fitted data
 ggplot(modelfits) +
-  geom_point(aes(year, accidents.obs), size = 3, shape = 1, color = "#5d6d7e") +
-  geom_point(aes(year, cancer.obs), size = 3, shape = 1, color = "#5d6d7e") +
-  geom_point(aes(year, heart.obs), size = 3, shape = 1, color = "#5d6d7e") +
-  geom_point(aes(year, pi.obs), size = 3, shape = 1, color = "#5d6d7e") +
-  geom_point(aes(year, stroke.obs), size = 3, shape = 1, color = "#5d6d7e") +
-  geom_point(aes(year, tb.obs), size = 3, shape = 1, color = "#5d6d7e") +
+  geom_point(aes(year, accidents.obs), size = 3, shape = 21, color = "#5d6d7e", fill = "grey") +
+  geom_point(aes(year, cancer.obs), size = 3, shape = 21, color = "#5d6d7e", fill = "grey") +
+  geom_point(aes(year, heart.obs), size = 3, shape = 21, color = "#5d6d7e", fill = "grey") +
+  geom_point(aes(year, pi.obs), size = 3, shape = 21, color = "#5d6d7e", fill = "grey") +
+  geom_point(aes(year, stroke.obs), size = 3, shape = 21, color = "#5d6d7e", fill = "grey") +
+  geom_point(aes(year, tb.obs), size = 3, shape = 21, color = "#5d6d7e", fill = "grey") +
   geom_line(aes(year, accidents.3), col = "#b8396b", size = 1.5) +
   geom_line(aes(year, cancer.3), col = "#ffd1d7", size = 1.5) +
   geom_line(aes(year, heart.3), col = "#fff5cc", size = 1.5) +
@@ -168,7 +168,4 @@ ggplot(modelfits) +
   theme_classic() +
   xlab("Year") +
   ylab("Age-Adjusted Moratlity Rate (per 100,000)") +
-  ggtitle("Major Causes of Death, 1900-1998")
-  
-
-dcast(mortdata, year ~ cod)
+  ggtitle("Major Causes of Death, 1900-1998 with best-fit joinpoint models")
