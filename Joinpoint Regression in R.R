@@ -239,7 +239,7 @@ colnames(rates) <- c("accidents.l", "cancer.l", "heart.l", "pi.l", "stroke.l", "
 mdw <- data.frame(mdw, log(rates))
 
 accidents.plot <- ggplot(mdw, aes(year, accidents.l)) +
-  geom_point(shape = 21, size = 3, color = "black", fill = "darkgrey") +
+  geom_point(shape = 21, size = 3.5, color = "black", fill = "darkgrey") +
   theme_classic() +
   xlab("Year") +
   ylab("log(Accident Mortality)")
@@ -270,7 +270,8 @@ accidents.calc
 # We can visualize them all together on the same plot
 accidents.plot + geom_vline(xintercept = accidents.calc[[1]], size = 1.2, color = "#5C6BC0") +
   geom_vline(xintercept = accidents.calc[[2]], size = 1.2, color = "#26C6DA")  +
-  geom_vline(xintercept = accidents.calc[[3]], size = 1.2, color = "#FFA726")
+  geom_vline(xintercept = accidents.calc[[3]], size = 1.2, color = "#FFA726") +
+  ggtitle("Accidents")
 
 
 # Let's finish by visualizing the rest of our model fits. 
@@ -278,14 +279,15 @@ accidents.plot + geom_vline(xintercept = accidents.calc[[1]], size = 1.2, color 
 # CANCER
 
 cancer.plot <- ggplot(mdw, aes(year, cancer.l)) +
-  geom_point(shape = 21, size = 3, color = "black", fill = "darkgrey") +
+  geom_point(shape = 21, size = 3.5, color = "black", fill = "darkgrey") +
   theme_classic() +
   xlab("Year") +
   ylab("log(Cancer Mortality)")
 
 cancer.plot + geom_vline(xintercept = cancer.calc[[1]], size = 1.2, color = "#5C6BC0") +
   geom_vline(xintercept = cancer.calc[[2]], size = 1.2, color = "#26C6DA")  +
-  geom_vline(xintercept = cancer.calc[[3]], size = 1.2, color = "#FFA726")
+  geom_vline(xintercept = cancer.calc[[3]], size = 1.2, color = "#FFA726") +
+  ggtitle("Cancer")
 
       # in the cancer plot, you can't even see the single joinpoint estimate because it is so close to 
       # the other estimates of the other models! 
@@ -294,48 +296,52 @@ cancer.plot + geom_vline(xintercept = cancer.calc[[1]], size = 1.2, color = "#5C
 # HEART DISEASE
 
 heart.plot <- ggplot(mdw, aes(year, heart.l)) +
-  geom_point(shape = 21, size = 3, color = "black", fill = "darkgrey") +
+  geom_point(shape = 21, size = 3.5, color = "black", fill = "darkgrey") +
   theme_classic() +
   xlab("Year") +
   ylab("log(Heart Disease Mortality)")
 
 heart.plot + geom_vline(xintercept = heart.calc[[1]], size = 1.2, color = "#5c6bc0") +
   geom_vline(xintercept = heart.calc[[2]], size = 1.2, color = "#26c6da") +
-  geom_vline(xintercept = heart.calc[[3]], size = 1.2, color = "#ffa726")
+  geom_vline(xintercept = heart.calc[[3]], size = 1.2, color = "#ffa726") +
+  ggtitle("Heart Disease")
 
 # INFLUENZA & PNEUMONIA
 
 pi.plot <- ggplot(mdw, aes(year, pi.l)) +
-  geom_point(shape = 21, size = 3, color = "black", fill = "darkgrey") +
+  geom_point(shape = 21, size = 3.5, color = "black", fill = "darkgrey") +
   theme_classic() +
   xlab("Year") +
   ylab("log(Influenza & Pneumonia Mortality)")
 
 pi.plot + geom_vline(xintercept = pi.calc[[1]], size = 1.2, color = "#5c6bc0") +
   geom_vline(xintercept = pi.calc[[2]], size = 1.2, color = "#26c6da") +
-  geom_vline(xintercept = pi.calc[[3]], size = 1.2, color = "#ffa726")
+  geom_vline(xintercept = pi.calc[[3]], size = 1.2, color = "#ffa726") +
+  ggtitle("Influenza & Pneumonia")
 
 # STROKE 
 
 stroke.plot <- ggplot(mdw, aes(year, stroke.l)) +
-  geom_point(shape = 21, size = 3, color = "black", fill = "darkgrey") +
+  geom_point(shape = 21, size = 3.5, color = "black", fill = "darkgrey") +
   theme_classic() +
   xlab("Year") +
   ylab("log(Stroke Mortality)")
 
 stroke.plot + geom_vline(xintercept = stroke.calc[[1]], size = 1.2, color = "#5c6bc0") +
   geom_vline(xintercept = stroke.calc[[2]], size = 1.2, color = "#26c6da") +
-  geom_vline(xintercept = stroke.calc[[3]], size = 1.2, color = "#ffa726")
+  geom_vline(xintercept = stroke.calc[[3]], size = 1.2, color = "#ffa726") +
+  ggtitle("Stroke")
 
 # TUBERCULOSIS
 
 tb.plot <- ggplot(mdw, aes(year, tb.l)) +
-  geom_point(shape = 21, size = 3, color = "black", fill = "darkgrey") +
+  geom_point(shape = 21, size = 3.5, color = "black", fill = "darkgrey") +
   theme_classic() +
   xlab("Year") +
   ylab("log(Tuberculosis Mortality)")
 
 tb.plot + geom_vline(xintercept = tb.calc[[1]], size = 1.2, color = "#5c6bc0") +
   geom_vline(xintercept = tb.calc[[2]], size = 1.2, color = "#26c6da") +
-  geom_vline(xintercept = tb.calc[[3]], size = 1.2, color = "#ffa726")
+  geom_vline(xintercept = tb.calc[[3]], size = 1.2, color = "#ffa726") +
+  ggtitle("Tuberculosis")
 
