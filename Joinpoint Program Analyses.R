@@ -168,4 +168,4 @@ ggplot(modelfits) +
   theme_classic() +
   xlab("Year") +
   ylab("Age-Adjusted Moratlity Rate (per 100,000)") +
-  ggtitle("Major Causes of Death, 1900-1998 with best-fit joinpoint models")
+  ggtitle("Major Causes of Death (1900-1998) with Best-Fits")
