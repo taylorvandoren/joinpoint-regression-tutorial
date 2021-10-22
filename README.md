@@ -16,9 +16,11 @@ Here is a visualization of the mortality data used in this analysis:
 and we will be working our way towards fitting best-fit joinpoint models to the data:
 ![causes of death in the United States from 1900-1998 with best-fit joinpoint models visualized with data](https://taylorvandoren.files.wordpress.com/2021/10/best-fit-all-causes.png)
 
+*One thing I must mention is that the above figures were made by calling a different [Github repository dedicated to color palettes of Taylor Swift albums](https://github.com/asteves/tayloRswift). These figures are in `lover`.*
+
 ## Analyses we'll do
 
-I'll go through two way sto do joinpoint modeling: 
+I'll go through two ways to do joinpoint modeling: 
 1. With the `ljr` (logistic joinpoint regression) package in R
    - `ljr` is powerful, but it only models logistic fits. That's okay! In the R script provided (Joinpoint Regression in R.R), I have written code to go through this step by step.
 3. With the **Joinpoint Regression Program**, which is an open-source software that you can download from the link at the top of this page. 
