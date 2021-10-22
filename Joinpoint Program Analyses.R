@@ -121,6 +121,7 @@ ggplot(modelfits, aes(x = year, y = pi.obs)) +
   geom_line(aes(year, pi.1), col = "#9c27b0", size = 1.5) +
   geom_line(aes(year, pi.2), col = "#ee5722", size = 1.1, linetype = "dashed") +
   geom_line(aes(year, pi.3), col = "#00bcd4", size = 1.1, linetype = "dashed") +
+  geom_hline(yintercept = 0, linetype = "dashed") +
   theme_classic() +
   xlab("Year") +
   ylab("Age-Adjusted Death Rate (per 100,000)") +
@@ -145,6 +146,7 @@ ggplot(modelfits, aes(x = year, y = tb.obs)) +
   geom_line(aes(year, tb.1), col = "#9c27b0", size = 1.1, linetype = "dashed") +
   geom_line(aes(year, tb.2), col = "#ee5722", size = 1.1, linetype = "dashed") +
   geom_line(aes(year, tb.3), col = "#00bcd4", size = 1.5) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
   theme_classic() +
   xlab("Year") +
   ylab("Age-Adjusted Death Rate (per 100,000)") +
