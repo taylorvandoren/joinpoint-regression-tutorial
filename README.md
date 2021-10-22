@@ -16,6 +16,8 @@ Here is a visualization of the mortality data used in this analysis:
 and we will be working our way towards fitting best-fit joinpoint models to the data:
 ![causes of death in the United States from 1900-1998 with best-fit joinpoint models visualized with data](https://taylorvandoren.files.wordpress.com/2021/10/best-fit-all-causes.png)
 
+*One thing I must mention is that the above figures were made by calling a different [Github repository dedicated to color palettes of Taylor Swift albums](https://github.com/asteves/tayloRswift). These figures are in `lover`.*
+
 ## Analyses we'll do
 
 I'll go through two ways to do joinpoint modeling: 
