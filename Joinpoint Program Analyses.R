@@ -23,7 +23,6 @@
 
 ### LOAD LIBRARIES
 
-library(reshape2)
 library(ggplot2)
 
 
@@ -171,3 +170,5 @@ ggplot(modelfits) +
   ylab("Age-Adjusted Moratlity Rate (per 100,000)") +
   ggtitle("Major Causes of Death, 1900-1998")
   
+
+dcast(mortdata, year ~ cod)
