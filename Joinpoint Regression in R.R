@@ -101,8 +101,11 @@ summary(mortdata.w)
 # As we will see in a few moments, the ljr() functions do not take mortality rates as arguments! 
     # What we will instead input as arguments are the number of deaths and the population size. 
     # Now, we need to back-calculate the number of deaths from each cause in each year using the 
-    # yearly population of the US to do so. 
+    # yearly population of the US to do so. The population data was imported decreasing years, so 
+    # we need to sort it so that it fits the conventions of linear time :-)
 
+pop$year <- sort(pop$year, decreasing = F)
+pop$pop <- sort(pop$pop, decreasing = F)
 rates <- mortdata.w %>% 
   select("Accidents", "Cancer", "Heart Disease", "Influenza and Pneumonia", "Stroke", "Tuberculosis")
 exp.deaths <- (rates/100000) * pop$pop
@@ -260,9 +263,9 @@ accidents.plot + geom_vline(xintercept = accidents.calc[[3]], size = 1.2, color 
     # is a preceding point. 
 
 accidents.calc
-    # As we can see by the list output, if there is only one joinpoint, the most significant point of change is in 1969.
-    # But when there is a joinpoint estimated BEFORE that time, then the estimate changes to 1970.
-    # When TWO points are estimated before that, then the estimate is 1968.
+    # As we can see by the list output, if there is only one joinpoint, the most significant point of change is in 1968.
+    # But when there is a joinpoint estimated BEFORE that time, then the estimate changes to 1971.
+    # When TWO points are estimated before that, then the estimate is 1967.
 
 # We can visualize them all together on the same plot
 accidents.plot + geom_vline(xintercept = accidents.calc[[1]], size = 1.2, color = "#5C6BC0") +

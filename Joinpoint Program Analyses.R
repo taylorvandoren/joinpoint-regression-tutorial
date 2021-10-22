@@ -12,7 +12,6 @@
     # open source and available for download at surveillance.cancer.gov/joinpoint. All you have to do is register 
     # for the software, and you will be sent a link with permission to download the program. It is perfect for 
     # researchers seeking to gain some insights into how rates change over time. 
-
 # This file will introdue the data and get it ready to import into the joinpoint program, but the bulk of the 
     # analysis will not be performed within this R file. Most of the code here will be devoted to creating
     # visualizations of the data and analyses performed outside the file in the Joinpoint Regression Program. 
@@ -81,7 +80,7 @@ modelfits <- read.csv("model fits.csv")
 
 # ACCIDENTS
 ggplot(modelfits, aes(x = year, y = accidents.obs)) +
-  geom_point(size = 3, shape = 1, col = "darkgrey") +
+  geom_point(size = 3.5, shape = 21, col = "black", fill = "darkgrey") +
   geom_line(aes(year, accidents.0), col = "#c91e63", size = 1.1, linetype = "dashed") +
   geom_line(aes(year, accidents.1), col = "#9c27b0", size = 1.1, linetype = "dashed") +
   geom_line(aes(year, accidents.2), col = "#ee5722", size = 1.1, linetype = "dashed") +
@@ -93,7 +92,7 @@ ggplot(modelfits, aes(x = year, y = accidents.obs)) +
 
 # CANCER 
 ggplot(modelfits, aes(x = year, y = cancer.obs)) +
-  geom_point(size = 3, shape = 1, col = "darkgrey") +
+  geom_point(size = 3.5, shape = 21, col = "black", fill = "darkgrey") +
   geom_line(aes(year, cancer.0), col = "#c91e63", size = 1.1, linetype = "dashed") +
   geom_line(aes(year, cancer.1), col = "#9c27b0", size = 1.1, linetype = "dashed") +
   geom_line(aes(year, cancer.2), col = "#ee5722", size = 1.1, linetype = "dashed") +
@@ -105,7 +104,7 @@ ggplot(modelfits, aes(x = year, y = cancer.obs)) +
 
 # HEART DISEASE
 ggplot(modelfits, aes(x = year, y = heart.obs)) +
-  geom_point(size = 3, shape = 1, col = "darkgrey") +
+  geom_point(size = 3.5, shape = 21, col = "black", fill = "darkgrey") +
   geom_line(aes(year, heart.0), col = "#c91e63", size = 1.1, linetype = "dashed") +
   geom_line(aes(year, heart.1), col = "#9c27b0", size = 1.1, linetype = "dashed") +
   geom_line(aes(year, heart.2), col = "#ee5722", size = 1.1, linetype = "dashed") +
@@ -117,7 +116,7 @@ ggplot(modelfits, aes(x = year, y = heart.obs)) +
 
 # PNEUMONIA & INFLUENZA
 ggplot(modelfits, aes(x = year, y = pi.obs)) +
-  geom_point(size = 3, shape = 1, col = "darkgrey") +
+  geom_point(size = 3.5, shape = 21, col = "black", fill = "darkgrey") +
   geom_line(aes(year, pi.0), col = "#c91e63", size = 1.1, linetype = "dashed") +
   geom_line(aes(year, pi.1), col = "#9c27b0", size = 1.5) +
   geom_line(aes(year, pi.2), col = "#ee5722", size = 1.1, linetype = "dashed") +
@@ -129,7 +128,7 @@ ggplot(modelfits, aes(x = year, y = pi.obs)) +
 
 # STROKE
 ggplot(modelfits, aes(x = year, y = stroke.obs)) +
-  geom_point(size = 3, shape = 1, col = "darkgrey") +
+  geom_point(size = 3.5, shape = 21, col = "black", fill = "darkgrey") +
   geom_line(aes(year, stroke.0), col = "#c91e63", size = 1.1, linetype = "dashed") +
   geom_line(aes(year, stroke.1), col = "#9c27b0", size = 1.1, linetype = "dashed") +
   geom_line(aes(year, stroke.2), col = "#ee5722", size = 1.1, linetype = "dashed") +
@@ -141,7 +140,7 @@ ggplot(modelfits, aes(x = year, y = stroke.obs)) +
 
 # TUBERCULOSIS
 ggplot(modelfits, aes(x = year, y = tb.obs)) +
-  geom_point(size = 3, shape = 1, col = "darkgrey") +
+  geom_point(size = 3.5, shape = 21, col = "black", fill = "darkgrey") +
   geom_line(aes(year, tb.0), col = "#c91e63", size = 1.1, linetype = "dashed") +
   geom_line(aes(year, tb.1), col = "#9c27b0", size = 1.1, linetype = "dashed") +
   geom_line(aes(year, tb.2), col = "#ee5722", size = 1.1, linetype = "dashed") +
