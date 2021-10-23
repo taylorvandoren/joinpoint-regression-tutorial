@@ -1,5 +1,5 @@
 # joinpoint-regression-tutorial
-Joinpoint Regression method for University of Washington Population Dynamics Lab
+Joinpoint Regression method for Population Dynamics Lab
 
 ## Welcome! 
 
