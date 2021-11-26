@@ -23,6 +23,7 @@
 ### LOAD LIBRARIES
 
 library(ggplot2)
+library(ggsci)
 
 
 ### LOAD DATA
@@ -43,7 +44,7 @@ ggplot(mortdata, aes(year, asdr, color = cod)) +
   theme_classic() +
   xlab("Year") +
   ylab("Age-Adjusted Death Rate (per 100,000)") +
-  tayloRswift::scale_color_taylor("lover")
+  scale_color_jco()
 
 # Looking at the initial plot will really help us develop some intuition about the kinds of results we 
     # might hope to see from the regression analyses. Since this regression method identifies points of 
