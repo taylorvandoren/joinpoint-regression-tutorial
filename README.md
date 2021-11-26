@@ -1,5 +1,5 @@
 # joinpoint-regression-tutorial
-Joinpoint Regression method for University of Washington Population Dynamics Lab
+Joinpoint Regression method for Population Dynamics Lab
 
 ## Welcome! 
 
@@ -34,4 +34,4 @@ All you'll need you can find here in this repository:
 - `usa pop.csv`
 - `model fits.csv`
 - The ljr package (avalaible on CRAN to download)
-- Other packages: ggplot2, reshape
+- Other packages: ggplot2, reshape2, dplyr
