@@ -43,6 +43,7 @@ library(ljr)
 library(dplyr)
 library(reshape2)
 library(ggplot2)
+library(tidyr)
 # yes, this IS a Github repo dedicated to color palettes of Taylor Swift albums
 library(tayloRswift)
 # (that's it!)
