@@ -44,8 +44,7 @@ library(dplyr)
 library(reshape2)
 library(ggplot2)
 library(tidyr)
-# yes, this IS a Github repo dedicated to color palettes of Taylor Swift albums
-library(tayloRswift)
+library(ggsci)
 # (that's it!)
 # yearly mortality rate for major causes of death in US 1990-1998
 mortdata <- read.csv("mortality data.csv")
@@ -69,24 +68,24 @@ summary(mortdata)
 # (can you find the dot for the 1918 influenza pandemic?)
 
 ggplot(mortdata, aes(year, asdr, color = cod)) +
-  geom_point(size = 3.5, shape = 1) +
-  geom_smooth() +
+  geom_point(size = 2, shape = 16, alpha = 0.6) +
+  geom_smooth(alpha = 0) +
   theme_classic() +
   xlab("Year") +
   ylab("Age-Adjusted Death Rate (per 100,000)") +
-  scale_color_taylor("lover")
+  scale_color_jco()
 
 # And the same figure again with a log transformation
 # (so we can better prepare for the following logistic analyses)
 
 mortdata$asdrlog <- log(mortdata$asdr)
 ggplot(mortdata, aes(year, asdr, color = cod)) +
-  geom_point(size = 3.5, shape = 1) +
-  geom_smooth() +
+  geom_point(size = 2, shape = 16, alpha = 0.6) +
+  geom_smooth(alpha = 0) +
   theme_classic() +
   xlab("Year") +
   ylab("Age-Adjusted Death Rate (per 100,000)") +
-  scale_color_taylor("lover") +
+  scale_color_jco() +
   scale_y_log10()
 
 # Looking at this figure, we will be able to make some pretty good educated
@@ -286,7 +285,7 @@ jp.summary
 # transformed mortality rates, and then visualize the joinpoint estimates
 
 accidents.plot <- ggplot(mdw, aes(year, accidents.r)) +
-  geom_point(shape = 21, size = 3.5, color = "black", fill = "darkgrey") +
+  geom_point(shape = 21, size = 3.5, color = "black", fill = "darkgrey", alpha = 0.6) +
   theme_classic() +
   xlab("Year") +
   ylab("Accident Mortality") +
@@ -411,3 +410,4 @@ tb.plot +
   geom_vline(xintercept = tb.calc[[2]], size = 1.2, color = "#26c6da") +
   geom_vline(xintercept = tb.calc[[3]], size = 1.2, color = "#ffa726") +
   ggtitle("Tuberculosis")
+
