@@ -212,6 +212,15 @@ fit.4 <- ljrk(3, mdw$pi.n, mdw$pop, mdw$year)
 # so we can easily index them for data visualization
 
 jp.calc <- function(exp.deaths, pop, time) {
+  
+  # argument definitions
+  # exp.deaths: a vector with the number of deaths that are expected to occur
+      # within the set period of time (number of deaths for a specific cause
+      # in one year, for example)
+  # pop: the population size over the defined period of time (e.g., one year)
+  # time: a vector with the time series over which the rates of interest occur
+      # (e.g., the study period here is yearly 1900-2000, so 1900, 1901, 1902,
+      # and so on)
 
   # calculate the joinpoint estimates for each cause of death, 0-3
   x0 <- ljr0(exp.deaths, pop, time)
@@ -283,6 +292,8 @@ jp.summary
 # as number of deaths and population size, the model used that information
 # and fit them as though they were rates. So, we'll need to PLOT the log
 # transformed mortality rates, and then visualize the joinpoint estimates
+
+
 
 accidents.plot <- ggplot(mdw, aes(year, accidents.r)) +
   geom_point(shape = 21, size = 3.5, color = "black", fill = "darkgrey", alpha = 0.6) +
