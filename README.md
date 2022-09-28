@@ -11,7 +11,7 @@ The data used for this tutorial can be found at:
 ### [United States Vital Statistics, Age-Adjusted Death Rates for Leading Causes of Death, 1900-1998](https://www.cdc.gov/nchs/nvss/mortality/hist293.htm)
 
 Here is a visualization of the mortality data used in this analysis:
-![causes of death (accidents, cancer, heart disease, influenza & pneumonia, stroke, and tuberculosis) in the United States from 1900-1998](https://taylorvandoren.files.wordpress.com/2021/10/all-causes.png)
+![causes of death (accidents, cancer, heart disease, influenza & pneumonia, stroke, and tuberculosis) in the United States from 1900-1998](https://github.com/taylorvandoren/joinpoint-regression-tutorial/blob/f4b4fd8feba8acd553449e92bc6076174ad1c2e2/Rplot.jpeg)
 
 and we will be working our way towards fitting best-fit joinpoint models to the data:
 ![causes of death in the United States from 1900-1998 with best-fit joinpoint models visualized with data](https://taylorvandoren.files.wordpress.com/2021/10/best-fit-all-causes.png)
